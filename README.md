@@ -22,6 +22,21 @@ Copy `.env.example` to `.env.local` and set:
 
 Vehicle and hero images are bundled in `public/images/` (downloaded from the original Manus project storage). The `/api/manus-storage` proxy is optional if you add new assets via Forge.
 
+## Push to GitHub (portal login, no manual token)
+
+```powershell
+cd dcr-app
+.\push-to-github.ps1
+```
+
+Uses `gh auth login` **without** `-w` (avoids browser 404). When prompted:
+
+1. Copy the 8-character code from the terminal
+2. Open https://github.com/login/device
+3. Paste the code and sign in (Google on GitHub is fine)
+
+Then the script creates `Ya7ya-digital/dcr-car-rental` and pushes.
+
 ## Deploy to Vercel
 
 1. Push this folder to GitHub.
